@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from '../components/Layout'
 
+import { graphql } from 'gatsby'
+
 export const FoodPageTemplate = ({
   menu
 }) => (
@@ -45,7 +47,7 @@ const FoodPage = ({ data }) => {
   return (
     <Layout>
       <FoodPageTemplate
-        menu={frontmatter.menu}
+        menu={frontmatter.menu.publicURL}
       />
     </Layout>
   )
@@ -65,7 +67,9 @@ export const pageQuery = graphql`
   query FoodPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        menu
+        menu {
+          publicURL
+        }
       }
     }
   }
