@@ -28,8 +28,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/assets/pdf`,
-        name: 'pdf'
-      }
+        name: 'pdf',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -73,9 +73,9 @@ module.exports = {
       options: {
         custom: {
           families: ['Gilroy-Light', 'Gilroy-SemiBold'],
-          urls: ['src/components/fonts.css']
-        }
-      }
+          urls: ['src/components/fonts.css'],
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
