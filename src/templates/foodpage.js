@@ -65,7 +65,7 @@ export default FoodPage
 
 export const pageQuery = graphql`
   query FoodPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "foodpage" } }) {
       frontmatter {
         menu {
           publicURL
