@@ -19,11 +19,6 @@ collections:
               widget: 'hidden',
               default: 'index-page',
             }
-          - {
-              label: 'Background Image',
-              name: 'background_image',
-              widget: image,
-            }
           - { label: 'Title Image', name: 'image', widget: image }
           - {
               label: 'Upcoming Events Section Title',
@@ -48,12 +43,6 @@ collections:
               name: 'artist_description',
               widget: 'string',
             }
-          - { label: 'Tickets Link', name: 'tickets_url', widget: 'string' }
-          - {
-              label: 'Artist Website',
-              name: 'artist_website',
-              widget: 'string',
-            }
           - { label: 'Playlist', name: 'spotify_playlist', widget: 'string' }
           - {
               label: 'Food Section Title',
@@ -74,11 +63,6 @@ collections:
               name: 'templateKey',
               widget: 'hidden',
               default: 'about-page',
-            }
-          - {
-              label: 'Background Image',
-              name: 'background_image',
-              widget: image,
             }
           - { label: 'Page Title', name: 'about_title', widget: 'string' }
           - { label: 'Heading', name: 'title', widget: 'string' }
@@ -152,27 +136,6 @@ collections:
               widget: 'hidden',
               default: 'calendar-page',
             }
-          - {
-              label: 'Background Image',
-              name: 'background_image',
-              widget: image,
-            }
-          - { label: 'Page Title', name: 'title', widget: 'string' }
-      - file: 'src/pages/community.md'
-        label: 'Community Page'
-        name: 'community'
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'community-page',
-            }
-          - {
-              label: 'Background Image',
-              name: 'background_image',
-              widget: image,
-            }
           - { label: 'Page Title', name: 'title', widget: 'string' }
       - file: 'src/pages/foodpage.md'
         label: 'Food & Drink Page'
@@ -187,4 +150,4 @@ collections:
           - label: 'Manual PDF'
             name: 'menu'
             widget: 'file'
-            default: 'src/img/menu.pdf'
+            default: 'src/assets/pdf/menu.pdf'

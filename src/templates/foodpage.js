@@ -2,39 +2,35 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import '../components/foodanddrink.sass'
 
 export const FoodPageTemplate = ({ menu }) => (
-  <main
+  <div
     style={{
-      backgroundImage: `url('../img/main_background.png') no-repeat center center fixed`,
+      positon: 'relative',
+      top: 'auto',
+      left: 'auto',
+      height: '100vh',
+      width: '100vw',
+      backgroundImage: `url(../img/main_background.png)`,
     }}>
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        height: '100vh',
-        width: '100vw',
-        backgroundColor: 'black',
-        zIndex: -10,
-      }}>
-      <embed src={menu} title="menu" style={{ width: '100%', height: 1500 }} />
-    </div>
-  </main>
+    <main>
+      <embed src={menu} title="menu" style={{ width: '100%', height: 850 }} />
+    </main>
+  </div>
 )
-
-FoodPageTemplate.propTypes = {
-  menu: PropTypes.string,
-}
 
 const FoodPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
   return (
     <Layout>
       <FoodPageTemplate menu={frontmatter.menu.publicURL} />
     </Layout>
   )
+}
+
+FoodPageTemplate.propTypes = {
+  menu: PropTypes.string,
 }
 
 FoodPage.propTypes = {
