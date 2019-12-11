@@ -5,7 +5,7 @@ import { CommunityPageTemplate } from '../../templates/community-page'
 const CommunityPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
-  const entryImages = entry.getIn(['data', 'gallery', 'images'])
+  const entryImages = entry.getIn(['data', 'gallery', 'images', 'image'])
   const images = entryImages ? entryImages.toJS() : []
 
   if (data) {
@@ -14,7 +14,7 @@ const CommunityPagePreview = ({ entry, getAsset }) => {
         background_image={data.background_image}
         title={data.title}
         menu={data.menu}
-        gallery={{ images }}
+        gallery={ data.gallery }
       />
     )
   } else {
