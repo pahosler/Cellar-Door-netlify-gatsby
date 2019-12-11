@@ -19,8 +19,28 @@ a
  
 
 hr  
-  border: 0.5px solid #707070 
+  border: 0.5px solid #707070
+
+// PDF
+.pdf-render-container
+  margin: 10% 0 10% 0
+
+.pdf_filename
+  font-family: Gilroy-SemiBold
+  text-align: center
+  font-size: x-large
+
+.pageNumber
+  padding: 20px 0 20px 0
+  text-transform: uppercase
+  font-family: Gilroy-SemiBold
  
+.pageNumber, .pdf-buttons-container
+  text-align: center
+  background-color: black
+
+.pdf-buttons-container
+  padding-bottom: 20px
 
 // Insert fonts here 
 
@@ -31,6 +51,7 @@ hr
   line-height: 70px 
   position: relative 
   z-index: 5 
+  margin-top: 10px
  
 
 .menu  
@@ -180,7 +201,7 @@ button:hover, .description > a:hover
   position: relative 
   margin: auto 
   border: 0.5px solid #707070 
-  min-width: 250px 
+  min-width: 275px 
   font-family: Gilroy-SemiBold
  
 
@@ -280,6 +301,13 @@ button:hover, .description > a:hover
   margin-top: 0 
   margin-bottom: 0 
  
+.food-title  
+  font-family: Gilroy-Light 
+  letter-spacing: 2px 
+  font-weight: 100 
+  font-size: 50px 
+  text-align: center 
+  margin: 15% 15% 30% 15% 
 
 .food-and-drinks  
   margin: 10% 0 10% 0 
@@ -364,6 +392,9 @@ footer
 @media only screen and (min-width: 20px)  
   .event  
     padding: 5% 
+
+  .pdf-title
+    text-align: center
    
  
 
